@@ -15,4 +15,6 @@ COPY --from=builder /app/target/*.jar app.jar
 RUN adduser -D springuser
 USER springuser
 
+EXPOSE 6642
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
